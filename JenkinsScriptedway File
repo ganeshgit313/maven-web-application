@@ -5,8 +5,7 @@ node {
 }
 
 stage('build'){
-    sh "${mavenHome}/bin/mvn clean package"
-    
+    sh "${mavenHome}/bin/mvn clean package"   
 }
 stage('ExecuteSonarqubeReport'){
     sh "${mavenHome}/bin/mvn sonar:sonar"
